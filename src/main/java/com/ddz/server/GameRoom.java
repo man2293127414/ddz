@@ -134,7 +134,6 @@ public class GameRoom {
             List<Card> hand = new ArrayList<>(deck.subList(i * 17, (i + 1) * 17));
             hand.sort(Card.cardComparator());
             handler.setHand(hand);
-
             Map<String, Object> payload = new HashMap<>();
             payload.put("hand", hand);
             handler.sendMessage(new Message(MessageType.DEAL_CARDS, payload));
